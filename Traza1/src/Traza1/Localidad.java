@@ -1,0 +1,18 @@
+package Traza1;
+
+import lombok.Builder;
+import lombok.Data;
+import lombok.ToString;
+
+import java.util.HashSet;
+import java.util.Set;
+
+@Data
+@Builder
+@ToString(exclude="provincia")
+public class Localidad {
+    private Long id;
+    private String nombre;
+    private Set<Domicilio> domicilios = new HashSet<>();
+    private Provincia provincia;
+}
